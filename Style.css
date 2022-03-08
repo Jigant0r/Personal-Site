@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  text-align: center;
+  color: #40514E;
+  font-family: 'Open Sans';
+}
+
+h1 {
+  font-size: 90px;
+  margin-top: 0;
+  font-family: 'Merriweather Sans', sans-serif;
+  color: white;
+  line-height: 2;
+}
+
+h2 {
+  font-weight: normal;
+  color: white;
+  padding: 10px;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 35px;
+  color: white;
+  font-weight: normal;
+}
+
+p {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+hr {
+  border: dotted #EAF6F6 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+  border-color: #116530;
+}
+
+a {
+  margin: 50px 50px auto 50px;
+  position: relative;
+  text-decoration: none;
+  color: green;
+}
+a:hover{
+color: white;
+}
+ul{
+  padding-left: 14rem;
+  color: white;
+}
+li{
+  line-height: 2;
+  padding-left: 5px;
+}
+
+.top-container {
+  position: relative;
+  padding-top: 100px;
+  background-color: #000957;
+}
+
+.middle-container {
+  background-color: #000957;
+}
+
+.bottom-container {
+  background-color: #ECDBBA;
+  padding: 50px 0 20px;
+  font-size: 20px;
+  color: green;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.code-img {
+  width: 15%;
+  float: left;
+  margin-right: 30px;
+}
+
+.fitness-img {
+  width: 15%;
+  float: right;
+}
+
+.controller-img {
+  width: 15%;
+  float: left;
+  margin-right: 30px;
+
+}
+
+.pro {
+  text-decoration: underline;
+}
+
+.intro {
+  width: 30%;
+  margin: auto;
+  color: white;
+}
+
+.code-description {
+  clear: right;
+  position: relative;
+  color: white;
+}
+
+.fitness-description {
+  clear: left;
+  position: relative;
+  color: white;
+}
+
+.game-description {
+  clear: right;
+  position: relative;
+  color: white;
+}
+
+#game-list{
+  align-items: center;
+  table-layout: auto;
+}
