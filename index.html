@@ -1,85 +1,211 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <link href="./Style.css" type="text/css" rel="stylesheet" />
-  <link href="./favicon.ico" type="text/css" rel="icon" / />
-  <!--Font family links -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steven Q — IT & Cybersecurity</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&family=Open+Sans&display=swap" rel="stylesheet">
-  <!--Bootstrap cdn -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="top-container">
-    <div class="float-right">
-      <h1 id = "title-heading">Hello! I'm Steven</h1>
-      <h3>Developer for hire</h3>
-      <img src="images/codeanim.gif" alt="code animation" />
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#">stevenq</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-tag">IT &amp; Cybersecurity</div>
+    <h1>Steven Q.</h1>
+    <p class="hero-role">support specialist &#8594; security engineer</p>
+    <p class="hero-bio">
+      I work in IT support with a growing focus on cybersecurity —
+      sharpening my problem-solving skills while building a hands-on
+      foundation in systems, networking, and security fundamentals.
+    </p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="resume.pdf" target="_blank">Download Resume</a>
+      <a class="btn-secondary" href="#contact">Get In Touch</a>
+    </div>
+    <div class="chips">
+      <span class="chip">System Troubleshooting</span>
+      <span class="chip">Network Fundamentals</span>
+      <span class="chip">Kali Linux</span>
+      <span class="chip">Active Directory</span>
+      <span class="chip">VMware / VirtualBox</span>
+      <span class="chip">Windows &amp; macOS</span>
     </div>
   </div>
 
-  <div class="middle-container">
-    <div class="profile">
-      <img src="images/self-image2.jpg" alt="bgimage">
-      <h2>Hello.</h2>
-      <p class="intro">Greetings Everyone,
-        As part of my programming journey and overall interest in tech, I created this site to present various projects that I'll be working on.
-        Feel free to browse my content.</p>
+  <!-- STATUS BAR -->
+  <div class="status-bar">
+    <div class="status-dot"></div>
+    <span class="status-text">Open to opportunities &nbsp;·&nbsp; Building in public</span>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">01 &mdash; About</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-heading">Hello.</h2>
+        <p>
+          I created this site as part of my journey through tech — a place to
+          document projects, share what I'm learning, and put my work in front
+          of people who might find it useful.
+        </p>
+        <p>
+          My background is in IT support, but I'm actively transitioning toward
+          cybersecurity. I spend a lot of time in labs, reading documentation,
+          and building things that break so I can figure out why.
+        </p>
+        <p>
+          Outside of tech I'm into fitness, gaming, and occasionally building
+          things with my hands.
+        </p>
+      </div>
+      <!-- Replace src with your actual photo path -->
+      <img class="about-photo" src="images/self-image2.jpg" alt="Steven Q" />
     </div>
-    <hr>
-    <div class="skills">
-      <h2>My Skills.</h2>
-      <div class="skill-row">
-        <img class="code-img" src="images/coding screen.png" alt="Code Screen">
-        <h3 class="code-title">Here are some skills I'm currently learning</h3>
-        <p class="code-description">Languages: Java, C#, Javascript, SQL. </p>
-        <p class="code-description">Frameworks: JavaFX, Spring, WPF, ASP.NET, Bootstrap. Project page coming soon.</p>
-        <p class="code-description">IT Technologies:Windows, Mac OS, Kali Linux, Active Directory, Virtual Box, VMWare.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">02 &mdash; Skills</div>
+    <h2 class="section-heading">What I work with.</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-title">Languages</div>
+        <ul>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>C#</li>
+          <li>SQL</li>
+          <li>Python (learning)</li>
+        </ul>
       </div>
-      <div class="skill-row">
-        <img class="fitness-img" src="images/dumbbell.png" alt="dumbbell">
-        <h3 class="fit-description">Fitness Enthusiast</h3>
-        <p class="fitness-description">Putting in a fair amount of work at the gym for my own health. Gallery available on my social media platfrom(s)</p>
+      <div class="skill-card">
+        <div class="skill-card-title">Frameworks</div>
+        <ul>
+          <li>JavaFX / Spring</li>
+          <li>ASP.NET / WPF</li>
+          <li>Bootstrap</li>
+        </ul>
       </div>
-      <div class="skill-row">
-        <img class="controller-img" src="images/game-controller.png" alt="gaming">
-        <h3 class="game-title">Gaming Connoisseur</h3>
-        <p class="game-description">Currently playing through Halo: Infinite. However I did make a list of some of my favorites:</p>
-        <ul id ="games-list">
-          <li>Zelda</li>
-          <li>Halo</li>
-          <li>Metal Gear Solid</li>
-          <li>Overwatch</li>
-          <li>Genshin Impact</li>
+      <div class="skill-card">
+        <div class="skill-card-title">IT &amp; Security</div>
+        <ul>
+          <li>Windows / macOS</li>
+          <li>Kali Linux</li>
+          <li>Active Directory</li>
+          <li>VirtualBox / VMware</li>
+          <li>Network Fundamentals</li>
         </ul>
       </div>
     </div>
-    <hr>
-    <div class="d-grid gap-2 d-md-block">
-      <h2>Get In Touch</h2>
-      <h3 class="contact-message">Feel free to reach out!</h3>
-      <p>Social media links:</p>
-      <a button type="button" class="btn btn-primary btn-lg d-grid gap-2 col-6 mx-auto" href="steve.q7@outlook.com"
-       style="padding:10px;background-color:rgba(163, 228, 219)">CONTACT ME</a>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">03 &mdash; Projects</div>
+    <h2 class="section-heading">What I'm building.</h2>
+    <div class="projects-grid">
+      <div class="project-card active">
+        <span class="badge badge-active">In Progress</span>
+        <div class="project-title">OS Virtual Lab</div>
+        <p class="project-desc">
+          A hands-on virtualization environment for testing OS configurations,
+          network setups, and security scenarios.
+        </p>
+      </div>
+      <div class="project-card active">
+        <span class="badge badge-active">In Progress</span>
+        <div class="project-title">Custom Drone Build</div>
+        <p class="project-desc">
+          Designing and assembling a custom drone from components — hardware
+          project focused on electronics and control systems.
+        </p>
+      </div>
+      <div class="project-card">
+        <span class="badge badge-planned">Planned</span>
+        <div class="project-title">Python Project</div>
+        <p class="project-desc">
+          A Python tool currently in the concept phase. Details coming once
+          the scope is defined.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 
+  <!-- INTERESTS -->
+  <section id="interests">
+    <div class="section-label">04 &mdash; Outside the terminal</div>
+    <h2 class="section-heading">A bit more about me.</h2>
+    <div class="interests-row">
+      <div class="interest-item">
+        <div class="interest-icon">&#x1F3CB;</div>
+        <div>
+          <div class="interest-title">Fitness</div>
+          <p class="interest-desc">
+            Putting in consistent work at the gym. It's good for the discipline
+            as much as the health.
+          </p>
+        </div>
+      </div>
+      <div class="interest-item">
+        <div class="interest-icon">&#x1F3AE;</div>
+        <div>
+          <div class="interest-title">Gaming</div>
+          <p class="interest-desc">
+            Zelda, Halo, Metal Gear Solid, Overwatch, Genshin Impact — a
+            pretty wide spread.
+          </p>
+        </div>
+      </div>
+      <div class="interest-item">
+        <div class="interest-icon">&#x1F6E0;</div>
+        <div>
+          <div class="interest-title">Building Things</div>
+          <p class="interest-desc">
+            Whether it's software, hardware, or something in between —
+            I like making things work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="bottom-container">
-    <a class="footer-link" href="https://www.reddit.com/user/Jigant0r">Reddit</a>
-    <a class="footer-link" href="https://www.instagram.com/_steveq_/">Instagram</a>
-    <a class="footer-link" href="https://www.tiktok.com/@_rusty7?lang=en">TikTok</a>
-    <p>© SteveQ</p>
-  </div>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">05 &mdash; Contact</div>
+    <div class="contact-inner">
+      <h2 class="section-heading">Get in touch.</h2>
+      <p>
+        Open to roles, collaborations, and conversations about IT and
+        cybersecurity. Feel free to reach out through any of the links below.
+      </p>
+      <div class="social-links">
+        <a class="social-link" href="mailto:steve.q7@outlook.com">Email</a>
+        <a class="social-link" href="https://www.reddit.com/user/Jigant0r" target="_blank">Reddit</a>
+        <a class="social-link" href="https://www.instagram.com/_steveq_/" target="_blank">Instagram</a>
+        <a class="social-link" href="https://github.com/Jigant0r" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="script.js" charset="utf-8"></script>
+  <!-- FOOTER -->
+  <footer>
+    <p>stevenq &mdash; built with HTML &amp; CSS</p>
+    <p>&copy; 2026 Steve Q</p>
+  </footer>
+
 </body>
-
 </html>
-
-<! Comment 1--> 
