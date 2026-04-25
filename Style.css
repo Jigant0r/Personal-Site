@@ -67,10 +67,18 @@ nav {
   text-transform: uppercase;
   color: var(--muted);
   text-decoration: none;
-  transition: color 0.2s;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 .nav-links a:hover { color: var(--accent); }
+
+/* Active state set by JS on scroll */
+.nav-links a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
 
 /* =====================
    HERO
@@ -230,13 +238,22 @@ nav {
 }
 
 /* =====================
-   SECTIONS SHARED
+   SECTIONS
+   Fade-in handled by JS adding .visible
 ===================== */
 section {
   max-width: 820px;
   margin: 0 auto;
   padding: 3.5rem 2.5rem;
   border-top: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-label {
@@ -283,7 +300,7 @@ h2.section-heading {
 }
 
 /* =====================
-   SKILLS
+   SKILLS + PROGRESS BARS
 ===================== */
 .skills-grid {
   display: grid;
@@ -310,22 +327,45 @@ h2.section-heading {
   margin-bottom: 0.75rem;
 }
 
-.skill-card ul {
-  list-style: none;
-  padding: 0;
+.skill-item {
+  margin-bottom: 0.85rem;
 }
 
-.skill-card ul li {
-  font-size: 13px;
+.skill-item:last-child { margin-bottom: 0; }
+
+.skill-item-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
   color: var(--muted);
-  padding: 3px 0;
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 5px;
 }
 
-.skill-card ul li:last-child { border-bottom: none; }
+.skill-item-label span:last-child {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* Width starts at 0, JS animates to data-width value */
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* =====================
-   PROJECTS
+   PROJECTS + EXPAND
 ===================== */
 .projects-grid {
   display: grid;
@@ -338,12 +378,31 @@ h2.section-heading {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 1.25rem;
+  cursor: pointer;
+  position: relative;
   transition: border-color 0.2s;
 }
 
 .project-card:hover { border-color: rgba(0,200,150,0.22); }
-
 .project-card.active { border-color: rgba(0,200,150,0.18); }
+
+.project-card::after {
+  content: '+ more';
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.project-card.expanded::after {
+  content: '− less';
+  color: var(--accent);
+}
 
 .badge {
   display: inline-block;
@@ -378,6 +437,48 @@ h2.section-heading {
   font-size: 12px;
   color: var(--muted);
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Hidden detail — revealed when card gets .expanded from JS */
+.card-detail {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.project-card.expanded .card-detail {
+  max-height: 300px;
+  opacity: 1;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.card-detail p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.card-detail ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-detail ul li {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 3px 0 3px 14px;
+  position: relative;
+}
+
+.card-detail ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
 }
 
 /* =====================
@@ -421,9 +522,7 @@ h2.section-heading {
 /* =====================
    CONTACT
 ===================== */
-.contact-inner {
-  max-width: 480px;
-}
+.contact-inner { max-width: 480px; }
 
 .contact-inner p {
   color: var(--muted);
