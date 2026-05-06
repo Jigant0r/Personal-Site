@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Steven Q — IT & Cybersecurity</title>
-  <link href="./Style.css" rel="stylesheet" type="text/css" />
+  <title>Steven Q — IT &amp; Cybersecurity</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="./Style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -73,60 +73,130 @@
           things with my hands.
         </p>
       </div>
-      <!-- Replace src with your actual photo path -->
       <img class="about-photo" src="images/Office-Desk-Self.jpg" alt="Steven Q" />
     </div>
   </section>
 
   <!-- SKILLS -->
+  <!-- data-width tells JS what percentage to animate each bar to -->
   <section id="skills">
     <div class="section-label">02 &mdash; Skills</div>
     <h2 class="section-heading">What I work with.</h2>
     <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-card-title">Languages</div>
-        <ul>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>C#</li>
-          <li>SQL</li>
-          <li>Python (learning)</li>
-        </ul>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-title">Frameworks</div>
-        <ul>
-          <li>JavaFX / Spring</li>
-          <li>ASP.NET / WPF</li>
-          <li>Bootstrap</li>
-        </ul>
-      </div>
+
       <div class="skill-card">
         <div class="skill-card-title">IT &amp; Security</div>
-        <ul>
-          <li>Windows / macOS</li>
-          <li>Kali Linux</li>
-          <li>Active Directory</li>
-          <li>VirtualBox / VMware</li>
-          <li>Network Fundamentals</li>
-        </ul>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>Network Fundamentals</span><span>85%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>Active Directory</span><span>75%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>Linux / Kali</span><span>70%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>Virtualization</span><span>80%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="80"></div></div>
+        </div>
       </div>
+
+      <div class="skill-card">
+        <div class="skill-card-title">Languages</div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>Java</span><span>70%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>JavaScript</span><span>60%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="60"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>C#</span><span>55%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="55"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>Python</span><span>30%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="30"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-title">Frameworks &amp; Tools</div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>Bootstrap</span><span>65%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="65"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>Spring / JavaFX</span><span>55%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="55"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>ASP.NET</span><span>50%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="50"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-label"><span>Git / GitHub</span><span>70%</span></div>
+          <div class="progress-track"><div class="progress-bar" data-width="70"></div></div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- PROJECTS -->
+  <!-- Click any card to expand and see more detail + photos -->
   <section id="projects">
     <div class="section-label">03 &mdash; Projects</div>
     <h2 class="section-heading">What I'm building.</h2>
     <div class="projects-grid">
+
       <div class="project-card active">
-        <span class="badge badge-active">In Progress</span>
+        <span class="badge badge-active">Complete</span>
         <div class="project-title">OS Virtual Lab</div>
         <p class="project-desc">
           A hands-on virtualization environment for testing OS configurations,
           network setups, and security scenarios.
         </p>
+        <div class="card-detail">
+          <p>Built using VirtualBox to simulate a multi-OS environment for security testing and system administration practice.</p>
+          <ul>
+            <li>Windows Server &amp; Kali Linux VMs</li>
+            <li>Internal network configuration</li>
+            <li>Snapshot-based sandbox workflow</li>
+            <li>Used for TryHackMe lab work</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="project-card active">
+        <span class="badge badge-active">Complete</span>
+        <div class="project-title">Security Camera System</div>
+        <p class="project-desc">
+          Reolink RLN8-410 NVR with 4 PoE cameras — planned, installed,
+          and configured end to end. Click to see the build.
+        </p>
+        <div class="card-detail">
+          <p>Designed and deployed a full IP camera system demonstrating real networking concepts in a home environment.</p>
+          <ul>
+            <li>PoE switch — single cable for data &amp; power</li>
+            <li>IP addressing &amp; NVR configuration</li>
+            <li>Physical mounting &amp; cable routing</li>
+            <li>Remote viewing setup</li>
+          </ul>
+          <!-- Project photo gallery -->
+          <div class="project-gallery">
+            <img src="images/projects/NVR.jpg" alt="Reolink RLN8-410 NVR" />
+            <img src="images/projects/PoE_Ports.jpg" alt="PoE switch ports with active links" />
+            <img src="images/projects/Camera.jpg" alt="Reolink PoE camera with mount" />
+            <img src="images/projects/Mounted_Cam.jpg" alt="Camera mounted on exterior" />
+          </div>
+        </div>
+      </div>
+
       <div class="project-card active">
         <span class="badge badge-active">In Progress</span>
         <div class="project-title">Custom Drone Build</div>
@@ -134,7 +204,17 @@
           Designing and assembling a custom drone from components — hardware
           project focused on electronics and control systems.
         </p>
+        <div class="card-detail">
+          <p>Component-level build covering electronics, firmware, and flight control configuration.</p>
+          <ul>
+            <li>Frame &amp; motor selection</li>
+            <li>Flight controller setup</li>
+            <li>ESC &amp; power system wiring</li>
+            <li>Radio transmitter configuration</li>
+          </ul>
+        </div>
       </div>
+
       <div class="project-card">
         <span class="badge badge-planned">Planned</span>
         <div class="project-title">Python Project</div>
@@ -142,7 +222,14 @@
           A Python tool currently in the concept phase. Details coming once
           the scope is defined.
         </p>
+        <div class="card-detail">
+          <p>Scope TBD — likely a security or automation tool to complement the cybersecurity focus.</p>
+          <ul>
+            <li>Details coming soon</li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -155,30 +242,21 @@
         <div class="interest-icon">&#x1F3CB;</div>
         <div>
           <div class="interest-title">Fitness</div>
-          <p class="interest-desc">
-            Putting in consistent work at the gym. It's good for the discipline
-            as much as the health.
-          </p>
+          <p class="interest-desc">Putting in consistent work at the gym. Good for discipline as much as health.</p>
         </div>
       </div>
       <div class="interest-item">
         <div class="interest-icon">&#x1F3AE;</div>
         <div>
           <div class="interest-title">Gaming</div>
-          <p class="interest-desc">
-            Zelda, Halo, Metal Gear Solid, Overwatch, Genshin Impact — a
-            pretty wide spread.
-          </p>
+          <p class="interest-desc">Zelda, Halo, Metal Gear Solid, Overwatch, Genshin Impact — a pretty wide spread.</p>
         </div>
       </div>
       <div class="interest-item">
         <div class="interest-icon">&#x1F6E0;</div>
         <div>
           <div class="interest-title">Building Things</div>
-          <p class="interest-desc">
-            Whether it's software, hardware, or something in between —
-            I like making things work.
-          </p>
+          <p class="interest-desc">Whether software, hardware, or something in between — I like making things work.</p>
         </div>
       </div>
     </div>
@@ -195,18 +273,20 @@
       </p>
       <div class="social-links">
         <a class="social-link" href="mailto:steve.q7@outlook.com">Email</a>
+        <a class="social-link" href="https://www.linkedin.com/in/steven-quiroz-8a030a373/" target="_blank">LinkedIn</a>
+        <a class="social-link" href="https://github.com/Jigant0r" target="_blank">GitHub</a>
         <a class="social-link" href="https://www.reddit.com/user/Jigant0r" target="_blank">Reddit</a>
         <a class="social-link" href="https://www.instagram.com/_steveq_/" target="_blank">Instagram</a>
-        <a class="social-link" href="https://github.com/Jigant0r" target="_blank">GitHub</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>stevenq &mdash; built with HTML &amp; CSS</p>
+    <p>stevenq &mdash; built with HTML, CSS &amp; JS</p>
     <p>&copy; 2026 Steve Q</p>
   </footer>
 
+  <script src="./script.js"></script>
 </body>
 </html>
