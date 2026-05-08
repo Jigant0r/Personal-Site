@@ -183,7 +183,7 @@ nav {
 .btn-secondary:hover { border-color: rgba(255,255,255,0.25); }
 
 /* =====================
-   SKILL CHIPS
+   CHIPS — hero section
 ===================== */
 .chips {
   display: flex;
@@ -239,15 +239,15 @@ nav {
 
 /* =====================
    SECTIONS
-   Fade-in handled by JS adding .visible
+   Visible by default — JS adds fade-in as enhancement
 ===================== */
 section {
   max-width: 820px;
   margin: 0 auto;
   padding: 3.5rem 2.5rem;
   border-top: 1px solid var(--border);
-  opacity: 0;
-  transform: translateY(16px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -300,7 +300,8 @@ h2.section-heading {
 }
 
 /* =====================
-   SKILLS + PROGRESS BARS
+   SKILLS — chip cards
+   No percentages, just grouped tags
 ===================== */
 .skills-grid {
   display: grid;
@@ -324,44 +325,31 @@ h2.section-heading {
   color: var(--accent);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.skill-item {
-  margin-bottom: 0.85rem;
-}
-
-.skill-item:last-child { margin-bottom: 0; }
-
-.skill-item-label {
+/* Chip group inside skill cards */
+.chips-group {
   display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 5px;
+  flex-wrap: wrap;
+  gap: 7px;
 }
 
-.skill-item-label span:last-child {
-  color: var(--accent);
+.skill-chip {
   font-family: var(--mono);
   font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 3px;
+  transition: color 0.2s, border-color 0.2s;
 }
 
-.progress-track {
-  width: 100%;
-  height: 3px;
-  background: var(--border);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-/* Width starts at 0, JS animates to data-width value */
-.progress-bar {
-  height: 100%;
-  width: 0;
-  background: var(--accent);
-  border-radius: 2px;
-  transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+.skill-chip:hover {
+  color: var(--accent);
+  border-color: rgba(0,200,150,0.25);
 }
 
 /* =====================
@@ -440,16 +428,16 @@ h2.section-heading {
   margin-bottom: 1.5rem;
 }
 
-/* Hidden detail — revealed when card gets .expanded from JS */
+/* Hidden detail — max-height: none when expanded so photos aren't cut off */
 .card-detail {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
 }
 
 .project-card.expanded .card-detail {
-  max-height: 300px;
+  max-height: 1000px; /* large enough to never clip photos */
   opacity: 1;
   padding-top: 1rem;
   border-top: 1px solid var(--border);
@@ -459,12 +447,13 @@ h2.section-heading {
   font-size: 12px;
   color: var(--muted);
   line-height: 1.7;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .card-detail ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 1rem;
 }
 
 .card-detail ul li {
@@ -479,6 +468,30 @@ h2.section-heading {
   position: absolute;
   left: 0;
   color: var(--accent);
+}
+
+/* =====================
+   PROJECT PHOTO GALLERY
+===================== */
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 0.75rem;
+}
+
+.project-gallery img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+  display: block;
+}
+
+.project-gallery img:hover {
+  border-color: rgba(0,200,150,0.3);
 }
 
 /* =====================
@@ -582,29 +595,6 @@ footer p {
   section { padding: 2.5rem 1.25rem; }
   .about-grid { grid-template-columns: 1fr; }
   .about-photo { max-width: 200px; }
+  .project-gallery { grid-template-columns: 1fr; }
   footer { padding: 1.25rem; }
-}
-
-/* =====================
-   PROJECT PHOTO GALLERY
-   Shown inside expanded card detail
-===================== */
-.project-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-top: 1rem;
-}
-
-.project-gallery img {
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  border-radius: 4px;
-  border: 1px solid var(--border);
-  transition: border-color 0.2s;
-}
-
-.project-gallery img:hover {
-  border-color: rgba(0,200,150,0.3);
 }
