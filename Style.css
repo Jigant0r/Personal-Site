@@ -598,3 +598,73 @@ footer p {
   .project-gallery { grid-template-columns: 1fr; }
   footer { padding: 1.25rem; }
 }
+
+/* =====================
+   LIGHTBOX
+   Fullscreen photo overlay triggered by JS
+   when a gallery image is clicked
+===================== */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.92);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* JS adds .active to show it */
+#lightbox.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+#lightbox-overlay {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid rgba(0,200,150,0.2);
+  display: block;
+}
+
+#lightbox-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#lightbox-close:hover {
+  color: var(--accent);
+  border-color: rgba(0,200,150,0.4);
+}
+
+/* Gallery images show a zoom cursor to hint they're clickable */
+.project-gallery img {
+  cursor: zoom-in;
+}
